@@ -1,0 +1,9 @@
+node_modules
+config.json
+dist
+env/*
+!env/.gitkeep
+logs/*
+!logs/.gitkeep
+.yarn
+.env

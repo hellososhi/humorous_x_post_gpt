@@ -1,0 +1,33 @@
+{
+  "name": "humorous_x_post_gpt",
+  "version": "1.0.0",
+  "description": "Create humorous posts using GPT and post them to X",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && mkdir -p ./dist/ && cp -r ./env ./dist/ && tsc",
+    "start": "export NODE_ENV=\"prod\" && node ./dist/src/index.js",
+    "start:dev": "export NODE_ENV=\"dev\" && node ./dist/src/index.js",
+    "dev": "export NODE_ENV=\"dev\" && ts-node ./src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "author": "hellososhi",
+  "license": "MIT",
+  "volta": {
+    "node": "20.8.1",
+    "yarn": "4.0.0-rc.53"
+  },
+  "dependencies": {
+    "langchain": "^0.0.167",
+    "openai": "^4.12.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "^20.8.6",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
